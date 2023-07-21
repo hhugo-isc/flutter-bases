@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgetsapp/config/menu/menu_items.dart';
-import 'package:widgetsapp/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -45,7 +45,7 @@ class _CustomListTile extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     return ListTile(
       onTap: () {
-        Navigator.pushNamed(context, menuItem.link);
+        context.push(menuItem.link);
       },
       leading: Icon(
         menuItem.icon,
